@@ -6,6 +6,7 @@
   "scripts": {
     "start": "vite",
     "dev": "vite",
+    "workshop": "vite --port 3005",
     "build": "vite build",
     "serve": "vite preview"
   },

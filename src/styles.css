@@ -1,0 +1,46 @@
+/* Shared TextInput styles (copied from other demos) */
+.text-input {
+  max-width: 420px;
+  margin: 0.5rem auto;
+  text-align: left;
+}
+.text-input__label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+.text-input__row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.text-input__field {
+  flex: 1 1 auto;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+.text-input__field:focus {
+  outline: none;
+  border-color: #646cff;
+  box-shadow: 0 0 0 3px #646cff22;
+}
+.text-input__clear {
+  background: transparent;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+}
+
+.input-example {
+  max-width: 720px;
+  margin: 2rem auto;
+  padding: 1rem;
+  text-align: left;
+}
+
+.input-example h1 {
+  margin-bottom: 1rem;
+}
