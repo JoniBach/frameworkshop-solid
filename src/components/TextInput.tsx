@@ -4,6 +4,8 @@ type Props = {
   label?: string
   value: string
   onChange: (v: string) => void
+  onBlur?: () => void
+  type?: string
   placeholder?: string
   showClear?: boolean
 }
@@ -14,6 +16,10 @@ const TextInput: Component<Props> = props => {
     props.onChange(v)
   }
 
+  const onBlur = () => {
+    props.onBlur && props.onBlur()
+  }
+
   return (
     <div class="text-input">
       {props.label && <label class="text-input__label">{props.label}</label>}
@@ -21,7 +27,9 @@ const TextInput: Component<Props> = props => {
         <input
           class="text-input__field"
           value={props.value}
+          type={props.type ?? 'text'}
           onInput={onInput}
+          onBlur={onBlur}
           placeholder={props.placeholder}
         />
         {props.showClear !== false && props.value && (
