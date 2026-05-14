@@ -21,9 +21,18 @@ const App: Component = () => {
 
   return (
     <div>
-      <nav style={{ display: 'flex', gap: '1rem', 'justify-content': 'center' }}>
-        <a href="#" onClick={(e) => { e.preventDefault(); navigate('/'); }}>Home</a>
-        <a href="#" onClick={(e) => { e.preventDefault(); navigate('/input-example'); }}>Input Example</a>
+      <nav style={{ display: 'grid', gap: '0.75rem', 'justify-content': 'center', 'margin-bottom': '1rem' }}>
+        <div style={{ display: 'flex', gap: '1rem', 'justify-content': 'center', 'flex-wrap': 'wrap' }}>
+          <a href="http://localhost:3001/">Angular</a>
+          <a href="http://localhost:3002/">React</a>
+          <a href="http://localhost:3003/">Vue</a>
+          <a href="http://localhost:3004/">Svelte</a>
+          <a href="http://localhost:3005/">Solid</a>
+        </div>
+        <div style={{ display: 'flex', gap: '1rem', 'justify-content': 'center' }}>
+          <a href="#" onClick={(e) => { e.preventDefault(); navigate('/'); }}>Home</a>
+          <a href="#" onClick={(e) => { e.preventDefault(); navigate('/input-example'); }}>Example</a>
+        </div>
       </nav>
 
       <main>
