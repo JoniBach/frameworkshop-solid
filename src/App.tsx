@@ -2,6 +2,7 @@ import type { Component } from 'solid-js';
 import { createSignal, onMount } from 'solid-js';
 import Comp from './Comp';
 import InputExample from './pages/InputExample';
+import Register from './pages/Register';
 
 const App: Component = () => {
   const [path, setPath] = createSignal(window.location.pathname);
@@ -32,6 +33,7 @@ const App: Component = () => {
         <div style={{ display: 'flex', gap: '1rem', 'justify-content': 'center' }}>
           <a href="#" onClick={(e) => { e.preventDefault(); navigate('/'); }}>Home</a>
           <a href="#" onClick={(e) => { e.preventDefault(); navigate('/input-example'); }}>Example</a>
+          <a href="#" onClick={(e) => { e.preventDefault(); navigate('/auth/register'); }}>Register</a>
         </div>
       </nav>
 
@@ -44,6 +46,7 @@ const App: Component = () => {
         )}
 
         {path() === '/input-example' && <InputExample />}
+        {path() === '/auth/register' && <Register />}
       </main>
     </div>
   );
